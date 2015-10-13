@@ -183,7 +183,8 @@ int main()
     //Write File Header
     avformat_write_header(pFormatCtx, NULL);
     
-    av_new_packet(&pkt, picture_size);
+    //av_new_packet(&pkt, picture_size);
+    av_init_packet(&pkt);
     
     y_size = pCodecCtx->width * pCodecCtx->height;
     
