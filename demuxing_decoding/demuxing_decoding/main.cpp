@@ -29,6 +29,21 @@
  * @example demuxing_decoding.c
  */
 
+/**
+ *  对视频进行解复用，然后对不同的流进行编码
+ *  大致流程如下
+ *  av_register_all             注册编解码器、格式等等
+ *  avformat_open_input         打开媒体文件
+ *  avformat_find_stream_info   查看媒体文件的流信息，看看是否有音频、视频、字幕等等
+ *  av_find_best_stream(mediatype)         根据mediatype找到合适的流
+ *  avcodec_find_decoder        为找到的 流 寻找合适的解码器
+ *  avcodec_open2               为找到的 流 打开合适的解码器
+ *  av_read_frame               读取待解码的数据到packet中,
+ *                              packet.stream_index标识了这个数据是属于哪个流
+ *  avcodec_decode_vedio2
+ *  avcodec_decode_audio4       对音频或者视频进行解码
+ */
+
 #ifdef __cplusplus
 #ifndef __STDC_CONSTANT_MACROS
 #define __STDC_CONSTANT_MACROS
