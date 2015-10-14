@@ -701,8 +701,8 @@ int main( int argc, char* argv[] )
         video_encode_example("test.h264", AV_CODEC_ID_H264);
     }
     else if (!strcmp(output_type, "mp2")){
-        audio_encode_example("test.aac");
-        audio_decode_example("test.pcm","test.aac");
+        audio_encode_example("test.mp2");
+        audio_decode_example("test.pcm","test.mp2");
     }
     else if(!strcmp(output_type, "mpg")){
         video_encode_example("test.mpg", AV_CODEC_ID_MPEG1VIDEO);
