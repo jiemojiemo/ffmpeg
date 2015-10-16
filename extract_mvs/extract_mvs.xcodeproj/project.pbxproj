@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AC6365E21BD086F9008AF3B7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC6365E11BD086F9008AF3B7 /* main.cpp */; };
+		AC6365E91BD087AE008AF3B7 /* libavutil.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6365E81BD087AE008AF3B7 /* libavutil.dylib */; };
+		AC6365EB1BD087C1008AF3B7 /* libavformat.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6365EA1BD087C1008AF3B7 /* libavformat.dylib */; };
+		AC6365ED1BD0882F008AF3B7 /* libavcodec.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6365EC1BD0882F008AF3B7 /* libavcodec.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		AC6365DE1BD086F9008AF3B7 /* extract_mvs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = extract_mvs; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6365E11BD086F9008AF3B7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		AC6365E81BD087AE008AF3B7 /* libavutil.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavutil.dylib; path = ../../../../../../usr/local/lib/libavutil.dylib; sourceTree = "<group>"; };
+		AC6365EA1BD087C1008AF3B7 /* libavformat.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavformat.dylib; path = ../../../../../../usr/local/lib/libavformat.dylib; sourceTree = "<group>"; };
+		AC6365EC1BD0882F008AF3B7 /* libavcodec.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcodec.dylib; path = ../../../../../../usr/local/lib/libavcodec.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC6365EB1BD087C1008AF3B7 /* libavformat.dylib in Frameworks */,
+				AC6365ED1BD0882F008AF3B7 /* libavcodec.dylib in Frameworks */,
+				AC6365E91BD087AE008AF3B7 /* libavutil.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +50,9 @@
 		AC6365D51BD086F9008AF3B7 = {
 			isa = PBXGroup;
 			children = (
+				AC6365EC1BD0882F008AF3B7 /* libavcodec.dylib */,
+				AC6365EA1BD087C1008AF3B7 /* libavformat.dylib */,
+				AC6365E81BD087AE008AF3B7 /* libavutil.dylib */,
 				AC6365E01BD086F9008AF3B7 /* extract_mvs */,
 				AC6365DF1BD086F9008AF3B7 /* Products */,
 			);
@@ -160,10 +172,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = /usr/local/include;
 			};
 			name = Debug;
 		};
@@ -196,23 +210,29 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = /usr/local/include;
 			};
 			name = Release;
 		};
 		AC6365E61BD086F9008AF3B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = /usr/local/include;
 			};
 			name = Debug;
 		};
 		AC6365E71BD086F9008AF3B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = /usr/local/include;
 			};
 			name = Release;
 		};
