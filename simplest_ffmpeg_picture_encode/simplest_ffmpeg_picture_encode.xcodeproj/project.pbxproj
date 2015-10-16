@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		ACA511CD1BCF916D00AF9C89 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACA511CC1BCF916D00AF9C89 /* main.cpp */; };
+		ACA511D41BCF94CB00AF9C89 /* libavcodec.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA511D31BCF94CB00AF9C89 /* libavcodec.dylib */; };
+		ACA511D61BCF94D200AF9C89 /* libavformat.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA511D51BCF94D200AF9C89 /* libavformat.dylib */; };
+		ACA511D81BCF9BBF00AF9C89 /* libavutil.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA511D71BCF9BBF00AF9C89 /* libavutil.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		ACA511C91BCF916D00AF9C89 /* simplest_ffmpeg_picture_encode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = simplest_ffmpeg_picture_encode; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA511CC1BCF916D00AF9C89 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		ACA511D31BCF94CB00AF9C89 /* libavcodec.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcodec.dylib; path = ../../../../../../usr/local/lib/libavcodec.dylib; sourceTree = "<group>"; };
+		ACA511D51BCF94D200AF9C89 /* libavformat.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavformat.dylib; path = ../../../../../../usr/local/lib/libavformat.dylib; sourceTree = "<group>"; };
+		ACA511D71BCF9BBF00AF9C89 /* libavutil.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavutil.dylib; path = ../../../../../../usr/local/lib/libavutil.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACA511D61BCF94D200AF9C89 /* libavformat.dylib in Frameworks */,
+				ACA511D41BCF94CB00AF9C89 /* libavcodec.dylib in Frameworks */,
+				ACA511D81BCF9BBF00AF9C89 /* libavutil.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +50,9 @@
 		ACA511C01BCF916D00AF9C89 = {
 			isa = PBXGroup;
 			children = (
+				ACA511D71BCF9BBF00AF9C89 /* libavutil.dylib */,
+				ACA511D51BCF94D200AF9C89 /* libavformat.dylib */,
+				ACA511D31BCF94CB00AF9C89 /* libavcodec.dylib */,
 				ACA511CB1BCF916D00AF9C89 /* simplest_ffmpeg_picture_encode */,
 				ACA511CA1BCF916D00AF9C89 /* Products */,
 			);
@@ -160,10 +172,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = /usr/local/include;
 			};
 			name = Debug;
 		};
@@ -196,23 +210,29 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = /usr/local/include;
 			};
 			name = Release;
 		};
 		ACA511D11BCF916D00AF9C89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = /usr/local/include;
 			};
 			name = Debug;
 		};
 		ACA511D21BCF916D00AF9C89 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = /usr/local/include;
 			};
 			name = Release;
 		};
